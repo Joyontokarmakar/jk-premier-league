@@ -1,28 +1,30 @@
 import React from 'react';
-import './ClubList.css'
+import './ClubList.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
+import { Button} from 'react-bootstrap';
 
 const ClubList = (props) => {
-    const {name, email, id} = props.clubs
+    const {strLeague, strSport, idTeam, strTeamBadge} = props.clubs
     const history = useHistory();
-    const handleClick = (id) => {
-        const url = `/club-detail/${id}`;
+    const handleClick = (idTeam) => {
+        const url = `/club-detail/${idTeam}`;
         history.push(url);
     }
-    const ClubStyle = {
-        border: '1px solid red',
-        padding: '10px',
-        margin: '5px',
-        borderRadius: '5px'
-    }
-    return (
-        <div style={ClubStyle}>
 
-            <h2>{name}</h2>
-            <p>{email}</p>
-            <Link to={`/club-detail/${id}`}>
-                <button>Details</button>
-            </Link>
+    return (
+        <div className ="col-md-4">
+            <div className="card_Item text-center">
+                <img src={strTeamBadge} className="clubList_img" alt=""/>
+                <hr/>
+                <h5>{strLeague}</h5>
+                <p>{strSport}</p>
+                <hr/>
+                <Link to={`/club-detail/${idTeam}`}>
+                    <Button className="viewDetailBtn">Details <FontAwesomeIcon icon={faArrowRight} className="icon" /></Button>
+                </Link>
+            </div>
         </div>
     );
 };

@@ -1,8 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import Home from './components/Home/Home';
 import Nomatch from './components/Nomatch/Nomatch';
 import ClubDetail from './components/ClubDetail/ClubDetail';
@@ -20,15 +18,19 @@ function App() {
         <Route path="/home">
           <Home/>
         </Route>
-        <Route path="/club-detail/:id">
+
+        <Route path="/club-detail/:idTeam">
           <ClubDetail/>
         </Route>
+
         <Route exact path="/">
           <Home/>
         </Route>
+
         <Route path="*">
           <Nomatch/>
         </Route>
+        
       </Switch>
     </Router>
   );

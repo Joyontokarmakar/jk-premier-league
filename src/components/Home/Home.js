@@ -1,8 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import ClubDetail from '../ClubDetail/ClubDetail';
 import ClubList from '../ClubList/ClubList';
+import homeBanner from '../images/Home_banner.jpeg';
 import './Home.css'
 
 const Home = () => {
@@ -13,14 +13,21 @@ const Home = () => {
         .then(data => setClubs(data.teams))
     }, [])
     return (
-        <div>
-            <h1>Clubs: {clubs.length}</h1>
-            {
-                clubs.map(clubs => <ClubList clubs={clubs}></ClubList>)
-            }
-            {
-                clubs.map(clubs => <ClubDetail clubs={clubs}></ClubDetail>)
-            }
+        <div className="home">
+            <div>
+                <img src={homeBanner} className="w-100" alt=""/>
+            </div>
+            
+            <div className="container py-3">
+                <div className="row">
+                    {
+                        clubs.map(clubs => <ClubList clubs={clubs}></ClubList>)
+                    }
+                </div>
+            </div>
+                
+
+
         </div>
     );
 };

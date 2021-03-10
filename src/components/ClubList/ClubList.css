@@ -1,0 +1,34 @@
+.card_Item{
+    background-color: #fff;
+    box-shadow: 4px 4px 15px 8px #ddd;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 25px;
+    margin: 15px 0;
+}
+
+.clubList_img{
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+.viewDetailBtn{
+    background-color: crimson;
+    border: 2px solid crimson;
+    box-shadow: 2px 2px 4px #ddd;
+    color: #fff;
+    width: 40%;
+}
+
+.viewDetailBtn:hover{
+    background-color: #fff !important;
+    color: crimson !important;
+    border: 2px solid crimson !important;
+    transition: 0.3s;
+}
+
+.viewDetailBtn:hover .icon{
+    margin-left: 8px;
+    transition: 0.8s;
+}
