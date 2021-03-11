@@ -21,57 +21,60 @@ const ClubDetail = (props) => {
         .then(res => res.json())
         .then(data => setClub(data.teams[0]))
     }, [idTeam])
+
+    let teamPhoto;
+    if (strGender === "Male") {
+        teamPhoto = <img src={male} className="genderGroupImage img-fluid" alt=""/>
+    } 
+    else {
+        teamPhoto = <img src={female} className="genderGroupImage img-fluid" alt=""/>
+    }
     return (
         <div className="home">
             <div>
                 <img src={strStadiumThumb} className="banner_img w-100 img-fluid" alt=""/>
                 <img src={strTeamBadge} className="logo_img img-fluid" alt=""/>
             </div>
-            <div className="container">
-                <div className="row team_details d-flex justify-content-center align-items-center">
-                    <div className="col-md-6">
-                        <h3 className="teamName">{strTeam}</h3>
-                        <ul className="teamData">
-                            <li><span><img src={found} alt=""/></span> Founded: {intFormedYear}</li>
-                            <li><span><img src={flag} alt=""/></span> Country: {strCountry}</li>
-                            <li><span><img src={football} alt=""/></span> Sport Type: {strSport}</li>
-                            <li><span><img src={gender} alt=""/></span> Gender: {strGender}</li>
-                        </ul>
-                    </div>
-                    <div className="col-md-6">
-                        {(() => {
-                            if (strGender === "Male") {
-                                return (
-                                    <img src={male} className="genderGroupImage img-fluid" alt=""/>
-                                )
-                            } 
-                            else {
-                                return (
-                                    <img src={female} className="genderGroupImage img-fluid" alt=""/>
-                                )
-                            }
-                        })()}
-                    </div>
-                </div>
-
+            <div className="container py-5">
                 <div className="row">
-                    <p className="description">{strStadiumDescription}</p>
-                </div>
-                <div className="row">
-                    <p className="description">{strDescriptionEN}</p>
-                </div>
-
-                <div className="row d-flex justify-content-center align-items-center">
-                    <a href={`https://${strFacebook}`} target="blank">
-                        <img src={faceBook} className="linkItem" alt=""/>
-                    </a>
-                    <a href={`https://${strTwitter}`} target="blank">
-                        <img src={twitter} className="linkItem" alt=""/>
-                    </a>
-                    <a href={`https://${strYoutube}`} target="blank">
-                        <img src={youtube} className="linkItem" alt=""/>
-                    </a>
-                </div>
+                    <div className="col-md-8 order-md-1 order-2 mt-4">
+                        <div className="teamDescription py-4">
+                            <div className="description">
+                                <h5>Club Description</h5>
+                                <p>{strDescriptionEN}</p>
+                            </div>
+                            <div className="description">
+                                <h5>Stadium Description</h5>
+                                <p>{strStadiumDescription}</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div className="col-md-4 order-md-2 order-1 mt-4">
+                        <div className="team_details">
+                            {teamPhoto}
+                            <h3 className="teamName text-center">{strTeam}</h3>
+                            <hr/>
+                            <ul className="teamData">
+                                <li><span><img src={found} alt=""/></span> Founded: {intFormedYear}</li>
+                                <li><span><img src={flag} alt=""/></span> Country: {strCountry}</li>
+                                <li><span><img src={football} alt=""/></span> Sport Type: {strSport}</li>
+                                <li><span><img src={gender} alt=""/></span> Gender: {strGender}</li>
+                            </ul>
+                            <div className="row d-flex justify-content-center align-items-center">
+                                <a href={`https://${strFacebook}`} target="blank" title="Facebook Page">
+                                    <img src={faceBook} className="linkItem" alt=""/>
+                                </a>
+                                <a href={`https://${strTwitter}`} target="blank" title="Twitter Handler">
+                                    <img src={twitter} className="linkItem" alt=""/>
+                                </a>
+                                <a href={`https://${strYoutube}`} target="blank" title="YouTube Channel">
+                                    <img src={youtube} className="linkItem" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
             </div>
         </div>
     );

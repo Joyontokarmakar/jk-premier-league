@@ -14,17 +14,19 @@
 }
 
 .viewDetailBtn{
-    background-color: crimson;
-    border: 2px solid crimson;
+    background-color: #263e56;
+    border: 2px solid #263e56;
     box-shadow: 2px 2px 4px #ddd;
     color: #fff;
     width: 40%;
 }
 
-.viewDetailBtn:hover{
+.viewDetailBtn:hover,
+.viewDetailBtn:active,
+.viewDetailBtn:focus{
     background-color: #fff !important;
-    color: crimson !important;
-    border: 2px solid crimson !important;
+    color: #263e56 !important;
+    border: 2px solid #263e56 !important;
     transition: 0.3s;
 }
 

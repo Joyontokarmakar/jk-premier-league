@@ -14,8 +14,9 @@ const Home = () => {
     }, [])
     return (
         <div className="home">
-            <div>
+            <div className="home_banner">
                 <img src={homeBanner} className="w-100" alt=""/>
+                <h5>JK Premier League</h5>
             </div>
             
             <div className="container py-3">

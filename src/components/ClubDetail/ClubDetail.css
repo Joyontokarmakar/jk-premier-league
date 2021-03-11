@@ -1,5 +1,5 @@
 .home{
-    background-color:#efefef;
+    background-color:#fff;
 }
 
 .banner_img{
@@ -16,40 +16,62 @@
 }
 
 .team_details{
-    background-color: cadetblue;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    box-shadow: 2px 4px 9px 5px #ddd;
     padding: 10px;
-    margin: 5% 0;
 }
 
 .genderGroupImage{
-    float: right;
     width: 80%;
+    display: block;
+    margin: 0 auto;
     padding: 2% 0;
 }
 
 .teamData{
     list-style-type: none;
-    color: #fff;
-    padding-left: 0;
+    color: #263e56;
+    padding-left: 10%;
 }
 
 .teamData li span img{
     height: 20px;
     width: 20px;
     margin-right: 5px;
+    background-color: #263e56;
+    border-radius: 5px 0 5px 0;
+    padding: 4px;
+    image-rendering: -webkit-optimize-contrast;
 } 
 .teamData li{
     line-height: 30px;
 } 
 
 .teamName{
-    color: #fff;
+    color: #263e56;
+}
+
+.teamDescription{
+    height: 430px;
+    overflow-y: scroll;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 4px 9px 5px #ddd;
 }
 
 .description{
     text-align: justify;
-    padding: 0 1%;
+    padding: 2% 5%;
+}
+
+.description h5{
+    text-decoration: underline;
+}
+.description p{
+    font-size: 14px;
 }
 
 .linkItem{
