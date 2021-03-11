@@ -2,7 +2,7 @@ import React from 'react';
 import './ClubList.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { Link, useHistory } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { Button} from 'react-bootstrap';
 
 const ClubList = (props) => {
