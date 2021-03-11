@@ -6,12 +6,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { Button} from 'react-bootstrap';
 
 const ClubList = (props) => {
-    const {strLeague, strSport, idTeam, strTeamBadge} = props.clubs
-    const history = useHistory();
-    const handleClick = (idTeam) => {
-        const url = `/club-detail/${idTeam}`;
-        history.push(url);
-    }
+    const {strLeague, strSport, idTeam, strTeamBadge} = props.clubs;
 
     return (
         <div className ="col-md-4">
