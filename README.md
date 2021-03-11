@@ -30,5 +30,6 @@
 
 
 ## Thank you for giving your concentration
-####### Stay connect with me: [Joyonto Karmakar](https://github.com/Joyontokarmakar)
+###### Stay connect with me
+[Joyonto Karmakar](https://github.com/Joyontokarmakar)
 
